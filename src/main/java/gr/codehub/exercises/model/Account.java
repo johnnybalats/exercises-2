@@ -15,11 +15,13 @@ public class Account {
 
     public double deposit(double amount) {
 
+        numberOfTransactions++;
         return balance += amount;
     }
 
     public double withdraw(double amount) {
 
+        numberOfTransactions++;
         return balance -= amount;
     }
 }

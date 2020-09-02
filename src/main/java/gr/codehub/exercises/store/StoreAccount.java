@@ -13,7 +13,21 @@ public class StoreAccount extends Account {
     private String storeName;
     private String accountCategory;
 
-    public void changeCategory() {
+    public StoreAccount(String owner, Double balance, int numberOfTransactions, String storeName, String accountCategory) {
 
+        super(owner, balance, numberOfTransactions);
+        this.storeName = storeName;
+        this.accountCategory = accountCategory;
+    }
+
+    public void changeCategory(String accountCategory) {
+
+        if (accountCategory.contains("Basic") || accountCategory.contains("Mid")
+                || accountCategory.contains("Extra") || accountCategory.contains("Premium")) {
+            this.accountCategory = accountCategory;
+            System.out.println("You changed to: " + accountCategory);
+        } else {
+            System.out.println("This category does not exist!");
+        }
     }
 }

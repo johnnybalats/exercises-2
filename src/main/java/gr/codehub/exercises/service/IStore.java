@@ -7,4 +7,6 @@ public interface IStore {
     void buy(Product product);
     void sell(Product product);
     double getRevenue();
+    int getInventory();
+    void reset();
 }
